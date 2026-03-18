@@ -4,7 +4,7 @@ public class DefaultCountingOutRhymer {
 
     public static final int SIZE = 12;
     public static final int ERROR_CODE = -1;
-    public static final int ELEVEN = 11;
+    public static final int STACK_FULL = SIZE-1;
     private final int[] numbers = new int[SIZE];
 
     public int total = ERROR_CODE;
@@ -19,7 +19,7 @@ public class DefaultCountingOutRhymer {
     }
 
     public boolean isFull() {
-        return total == ELEVEN;
+        return total == STACK_FULL;
     }
 
     protected int peekaboo() {
