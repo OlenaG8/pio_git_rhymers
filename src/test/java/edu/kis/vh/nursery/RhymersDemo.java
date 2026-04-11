@@ -13,7 +13,7 @@ class RhymersDemo {
         DefaultCountingOutRhymer[] rhymers = { factory.getStandardRhymer(), factory.getFalseRhymer(),
                 factory.getFifoRhymer(), factory.getHanoiRhymer()};
 
-        for (int i = 1; i < 15; i++)
+        for (int i = 1; i < 15; i++) //TODO: magiczne liczby: (15, 3 i 20).
             for (int j = 0; j < 3; j++)
                 rhymers[j].countIn(i);
 

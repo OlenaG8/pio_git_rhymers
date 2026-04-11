@@ -5,6 +5,7 @@ import org.junit.Test;
 
 // Projekt jest poprawny
 public class RhymersJUnitTest {
+    //TODO: zamiast 'assertEquals(true, result)' można użyć 'assertTrue()'
 
     @Test
     public void testCountIn() {
@@ -31,7 +32,7 @@ public class RhymersJUnitTest {
     @Test
     public void testIsFull() {
         DefaultCountingOutRhymer rhymer = new DefaultCountingOutRhymer();
-        final int STACK_CAPACITY = 12;
+        final int STACK_CAPACITY = 12; // TODO: Wartość STACK_CAPACITY powinna być pobierana z klasy DefaultCountingOutRhymer, a nie wpisana na sztywno.
         for (int i = 0; i < STACK_CAPACITY; i++) {
             boolean result = rhymer.isFull();
             Assert.assertEquals(false, result);

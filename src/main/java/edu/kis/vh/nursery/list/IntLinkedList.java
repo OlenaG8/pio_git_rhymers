@@ -34,7 +34,7 @@ public class IntLinkedList {
      * * @return Zawsze zwraca false, ponieważ lista powiązana ma dynamiczny rozmiar.
      */
     public boolean isFull() {
-        return false;
+        return false; // TODO: Sprawdzić, czy ta metoda jest w ogóle potrzebna w dynamicznej liście.
     }
 
     /**
@@ -43,7 +43,7 @@ public class IntLinkedList {
      */
     public int top() {
         if (isEmpty())
-            return -1;
+            return -1; // TODO: Zamiast zwracać -1 (które może być poprawną wartością), należałoby rozważyć rzucenie wyjątku.
         return last.getValue();
     }
 
@@ -53,7 +53,7 @@ public class IntLinkedList {
      */
     public int pop() {
         if (isEmpty())
-            return -1;
+            return -1; // TODO: Zamiast zwracać -1 (które może być poprawną wartością), należałoby rozważyć rzucenie wyjątku.
         int ret = last.getValue();
         last = last.getPrev();
         return ret;

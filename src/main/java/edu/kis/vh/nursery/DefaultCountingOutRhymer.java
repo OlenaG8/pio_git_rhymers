@@ -14,7 +14,7 @@ public class DefaultCountingOutRhymer {
             numbers[++total] = in;
     }
 
-    public boolean callCheck() {
+    public boolean callCheck() { // TODO: Nazwa 'callCheck' jest nieintuicyjna, lepsza nazwa by była 'isEmpty'.
         return total == STACK_EMPTY;
     }
 
@@ -28,7 +28,7 @@ public class DefaultCountingOutRhymer {
         return numbers[total];
     }
 
-    public int countOut() {
+    public int countOut() { // TODO: Nazwa 'countOut' mogłaby zostać zastąpiona standardowym 'pop'.
         if (callCheck())
             return STACK_EMPTY;
         return numbers[total--];
