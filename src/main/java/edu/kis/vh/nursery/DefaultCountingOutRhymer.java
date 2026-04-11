@@ -1,0 +1,37 @@
+package edu.kis.vh.nursery;
+
+public class DefaultCountingOutRhymer {
+
+    public static final int SIZE = 12;
+    public static final int STACK_EMPTY = -1;
+    public static final int STACK_FULL = SIZE-1;
+    private final int[] numbers = new int[SIZE];
+
+    public int total = STACK_EMPTY;
+
+    public void countIn(int in) {
+        if (!isFull())
+            numbers[++total] = in;
+    }
+
+    public boolean callCheck() { // TODO: Nazwa 'callCheck' jest nieintuicyjna, lepsza nazwa by była 'isEmpty'.
+        return total == STACK_EMPTY;
+    }
+
+    public boolean isFull() {
+        return total == STACK_FULL;
+    }
+
+    protected int peekaboo() {
+        if (callCheck())
+            return STACK_EMPTY;
+        return numbers[total];
+    }
+
+    public int countOut() { // TODO: Nazwa 'countOut' mogłaby zostać zastąpiona standardowym 'pop'.
+        if (callCheck())
+            return STACK_EMPTY;
+        return numbers[total--];
+    }
+
+}
